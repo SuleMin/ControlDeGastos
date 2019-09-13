@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::view('/', function () {
+    return view('home');
+});
+
+Route::get('/gastos', function () {
+    return view('gastos');
+});
+
+Route::get('/ingresos', function () {
+    return view('ingresos');
+});
+
+Route::resource('/gastos', 'GastoController');
+Route::resource('/ingresos', 'IngresoController');
